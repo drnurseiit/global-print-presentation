@@ -20,6 +20,7 @@
   .section {
     padding: 32px 16px;
     position: relative;
+    text-align: center;
   }
   .section::before {
     content: '';
@@ -59,6 +60,7 @@
     letter-spacing: -0.03em;
     line-height: 1.1;
     color: #0f172a;
+    text-align: center;
   }
   h1 span { background: linear-gradient(135deg, #7c3aed, #3b82f6, #22d3ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
   h2 {
@@ -68,12 +70,14 @@
     line-height: 1.2;
     color: #0f172a;
     margin-bottom: 16px;
+    text-align: center;
   }
   p {
     font-size: clamp(16px, 1.4vw, 22px);
     line-height: 1.7;
     color: #475569;
     max-width: 800px;
+    margin: 0 auto;
   }
   .subtitle {
     font-size: clamp(18px, 1.6vw, 24px);
@@ -83,14 +87,15 @@
   }
   .grid-2, .grid-3, .grid-4 { display: grid; gap: 12px; margin-top: 20px; }
   .grid-2 { grid-template-columns: 1fr; }
-  .grid-3 { grid-template-columns: repeat(3, 1fr); }
-  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: 1fr 1fr; }
   .card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
     border-radius: 16px;
     padding: 24px;
     transition: all 0.3s ease;
+    text-align: left;
   }
   .card:hover { border-color: #93c5fd; box-shadow: 0 8px 24px rgba(0,0,0,0.06); transform: translateY(-2px); }
   .card-icon {
@@ -102,7 +107,7 @@
   }
   .card h3 { font-size: 16px; font-weight: 600; color: #1e293b; margin-bottom: 8px; }
   .card p { font-size: 14px; color: #64748b; line-height: 1.5; }
-  .tech-list { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+  .tech-list { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; justify-content: center; }
   .tech-item {
     padding: 10px 18px; border-radius: 10px;
     background: #ffffff;
@@ -126,11 +131,12 @@
     background: linear-gradient(135deg, #7c3aed, #4f46e5);
     color: #fff; font-size: 12px; font-weight: 800;
   }
-  .steps { display: flex; gap: 12px; margin-top: 32px; }
+  .steps { display: flex; gap: 12px; margin-top: 20px; flex-direction: column; }
   .step {
     flex: 1; padding: 20px; border-radius: 14px;
     border: 1px solid #e2e8f0;
     background: #ffffff;
+    text-align: left;
   }
   .step-num {
     width: 32px; height: 32px; border-radius: 10px;
@@ -145,16 +151,18 @@
     padding: 20px 28px; border-radius: 14px;
     background: #ffffff;
     border: 1px solid #e2e8f0;
+    text-align: center;
   }
   .stat-value { font-size: 36px; font-weight: 800; background: linear-gradient(135deg, #7c3aed, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
   .stat-label { font-size: 14px; color: #64748b; margin-top: 4px; }
   .quote {
     border-left: 3px solid #7c3aed; padding-left: 24px; margin-top: 24px;
     font-style: italic; color: #64748b; font-size: 18px; line-height: 1.6;
+    text-align: left;
   }
-  .two-col { display: block; margin-top: 16px; }
+  .two-col { display: block; margin-top: 16px; text-align: left; }
   .features-grid { display: grid; grid-template-columns: 1fr; gap: 8px; margin-top: 16px; }
-  .feature { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 10px; background: #ffffff; border: 1px solid #e2e8f0; }
+  .feature { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 10px; background: #ffffff; border: 1px solid #e2e8f0; text-align: left; }
   .feature span { font-size: 18px; }
   .feature strong { font-size: 14px; font-weight: 500; color: #334155; }
   .card-accent { background: #eff6ff !important; border-color: #93c5fd !important; }
